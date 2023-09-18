@@ -30,7 +30,8 @@ pipeline {
 				echo "Integration Test"
 			}
 		}
-	} post {
+	} 
+	post {
 		always {                                 //multiple options 
 			echo 'I am awesome. i run always'  
 		}
