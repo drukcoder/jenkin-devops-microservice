@@ -32,7 +32,7 @@ pipeline {
 		}
 	} 
 	post {
-		always {                                 //multiple options 
+		always {                          //multiple options. Other options changed, unstable
 			echo 'I am awesome. i run always'  
 		}
 		success {
@@ -40,6 +40,9 @@ pipeline {
 		}
 		failure { 
 			echo 'I run when you fail'
+		}	
+		changed { 
+			echo 'I run whenever status of build changes'
 		}	
 	}
 }
