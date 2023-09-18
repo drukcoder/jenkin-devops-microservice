@@ -16,17 +16,17 @@ pipeline {
 	agent any  // using any as agent, left to jenkins 
 	//agent { docker { image 'node:13.8' }} //using node.js as agent,version from docker node runner 
 	//agent { docker{ image 'maven:3.6.3'}}
-	/*environment {
+	environment {
 		dockerHome = tool 'myDocker'
 		mavenHome = tool 'myMaven'
 		PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
-	}*/
+	}
 	
 	stages {
 		stage('Build'){
 			steps {
-				//sh 'docker version'    
-				//sh 'mvn --version'
+				sh 'docker version'    
+				sh 'mvn --version'
 				echo "Build"
 				echo "PATH - $PATH"
 				echo "BUILD_NUMBER - $env.BUILD_NUMBER"
