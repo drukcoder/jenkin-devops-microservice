@@ -1,3 +1,5 @@
+
+//this is scripted syntax, works without defining stages too. other approach is declarative syntax
 node {
 	stage('Build') {
 		echo "Build"
